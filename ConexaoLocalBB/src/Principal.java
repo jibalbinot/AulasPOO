@@ -7,6 +7,7 @@ import java.sql.SQLException;
 public class Principal {
 
 	public static void main(String[] args) {
+		System.out.println("Exemplo básico de conexão");
 		System.out.println("vou conectar ...");
 		String url = "jdbc:mysql://localhost:3306/bb";
 		String user = "root";
