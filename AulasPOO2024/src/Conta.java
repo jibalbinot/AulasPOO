@@ -1,24 +1,23 @@
 public class Conta {
 	
-	final private double LIMITE_MINIMO = 1000;
-	final private double LIMITE_PADRAO = 1500;
-	final private double LIMITE_MAXIMO = 3500;
+	final static private double LIMITE_MINIMO = 1000;
+	final static private double LIMITE_PADRAO = 1500;
+	final static private double LIMITE_MAXIMO = 3500;
 	
 	private int numero;
 	private Cliente titular;
 	private double limite = LIMITE_PADRAO;
 	private double saldo = 0;
 	
+	private static int cont = 1000;
+	
 	//construtor padrão
 	public Conta(){
 		System.out.println("Padrao: conta criada com sucesso");
 	}
-	public Conta(int numero){
-		this.setNumero(numero);
-		System.out.println("Outro: conta "+numero+" criada com sucesso");
-	}
-	public Conta(int numero, Cliente cliente){
-		this(numero);
+
+	public Conta(Cliente cliente){
+		this.numero = ++Conta.cont;
 		this.setTitular(cliente);
 	}
 	
