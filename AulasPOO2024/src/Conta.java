@@ -9,13 +9,8 @@ public class Conta {
 	private double limite = LIMITE_PADRAO;
 	private double saldo = 0;
 	
-	private static int cont = 1000;
+	private static int cont = 0;
 	
-	//construtor padrão
-	public Conta(){
-		System.out.println("Padrao: conta criada com sucesso");
-	}
-
 	public Conta(Cliente cliente){
 		this.numero = ++Conta.cont;
 		this.setTitular(cliente);
@@ -70,7 +65,8 @@ public class Conta {
 		System.out.println("----- Conta ----- ");
 		System.out.println("Numero.: "+this.numero);
 		//System.out.println("Titular: "+this.titular.getNome());
-		titular.mostra();
+		if(titular != null)
+			titular.mostra();
 		System.out.println("Limite.: "+this.limite);
 		System.out.println("Saldo..: "+this.saldo);
 		System.out.println();
